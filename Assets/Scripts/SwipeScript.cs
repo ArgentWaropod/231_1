@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using TMPro;
 using UnityEngine;
 using UnityEditor.U2D;
@@ -21,6 +20,7 @@ public class SwipeScript : MonoBehaviour
     public Canvas winScreen;
     public Canvas loseScreen;
     states isPlaying;
+    Scene thescene;
     public TextMeshProUGUI text;
 
     // Update is called once per frame
@@ -31,6 +31,7 @@ public class SwipeScript : MonoBehaviour
         winScreen.gameObject.SetActive(false);
         loseScreen.gameObject.SetActive(false);
         isPlaying = states.PLAYING;
+        thescene = SceneManager.GetActiveScene();
         timer = 10;
     }
     void Update()
@@ -75,7 +76,7 @@ public class SwipeScript : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
+        SceneManager.LoadScene(1);
     }
     public void menu()
     {

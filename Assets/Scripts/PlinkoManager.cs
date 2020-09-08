@@ -30,7 +30,7 @@ public class PlinkoManager : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene(scene.ToString());
+        SceneManager.LoadScene(2);
     }
     public void menu()
     {
